@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h3 class="h3-head">New Employee</h3>
+        <form>
+            <div class="form-group">
+                <label for="name">Email:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name">
+                <p id="nameError" class="error-message"></p>
+            </div>
+            <label for="designation">Designation:</label>
+            <select class="form-control mb-3" id="designation">
+                <option value="">Select Designation</option>
+                <option value="Software Developer">Software Developer</option>
+                <option value="Software Engineer">Software Engineer</option>
+                <option value="Android Developer">Android Developer</option>
+                <option value="Backend Engineer">Backend Engineer</option>
+                <option value="UI/UX Developer">UI/UX Developer</option>
+            </select>
+            <p id="designationError" class="error-message"></p>
+            <label for="doj">DOJ:</label>
+            <div class="input-group date">
+                <input type="date" class="form-control" id="doj" placeholder="Select DOJ" name="doj">
+                <div class="input-group-append">
+                    <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                </div>
+            </div>
+            <p id="dojError" class="error-message"></p>
+
+            <div class="form-group">
+                <label for="salary">Salary:</label>
+                <input type="text" class="form-control" id="salary" placeholder="(e.g)15LPA" name="name">
+                <p id="salaryError" class="error-message"></p>
+            </div>
+            <input type="button" class="btn btn-primary" value="submit" onclick="save()" id="submit">
+        </form>
+        <div class="table-container mt-4">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Designation</th>
+                        <th>DOB</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
